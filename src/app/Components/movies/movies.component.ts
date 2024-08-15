@@ -40,9 +40,16 @@ export class MoviesComponent implements OnInit {
   readonly dialog = inject(MatDialog);
 
   // open rating dialog
-  openRatingDialog(): void {
-    const dialogRef = this.dialog.open(RatingDialogComponent);
+  openRatingDialog(movie: Movie): void {
+    const dialogRef = this.dialog.open(RatingDialogComponent, {
+      data: movie.id,
+    });
 
-    dialogRef.afterClosed().subscribe((result) => {});
+    // updating rating
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log(result);
+      }
+    });
   }
 }
