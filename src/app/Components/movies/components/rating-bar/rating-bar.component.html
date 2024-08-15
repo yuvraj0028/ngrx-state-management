@@ -1,0 +1,7 @@
+<div class="rating-container">
+  <p class="rating-text">Ratings - </p>
+  <bar-rating class="rating-stars" [(rate)]="rating" max="5" [readonly]="true">
+    <i *ratingActive class="bi bi-star-fill" style="margin: 2px; color: #edb867"></i>
+    <i *ratingInactive class="bi bi-star-fill" style="margin: 2px; color: #d2d2d2"></i>
+  </bar-rating>
+</div>

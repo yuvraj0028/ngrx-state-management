@@ -1,0 +1,71 @@
+.movie-card {
+  margin: 2%;
+  max-width: 300px;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border: 2px solid #e51937;
+}
+
+.movie-card-image {
+  margin: 2%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.movie-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px -5px;
+}
+.movie-card-play-icon {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+}
+
+.icon-container {
+  position: absolute;
+  bottom: 43%;
+  left: 75%;
+  border: 5px solid;
+  background-color: #00000080;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.icon-container :hover {
+  cursor: pointer;
+  background-color: #e51937;
+  border-radius: 50%;
+}
+
+.movie-name {
+  margin-left: 2%;
+  margin-top: 2%;
+  font-size: 1.5rem;
+  font-weight: 25px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-lines: 1;
+}
+
+.movie-card-rating {
+  margin-top: 5%;
+}
+
+.chips-container {
+  margin-left: 2%;
+  margin-top: -3%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  margin: 2%;
+  background-color: #e51937;
+}

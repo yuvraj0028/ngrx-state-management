@@ -1,0 +1,25 @@
+<div class="movie-card-container">
+  <mat-card *ngFor="let movie of movies" class="movie-card" appearance="outlined">
+    <img mat-card-image class="movie-card-image" src={{movie.imageUrl}} alt="img">
+    <div class="icon-container">
+      <mat-icon class="movie-card-play-icon">play_arrow</mat-icon>
+    </div>
+    <div class="movie-name">
+      {{movie.name}}
+    </div>
+    <mat-card-actions>
+      <app-rating-bar class="movie-card-rating" [movie]="movie"></app-rating-bar>
+    </mat-card-actions>
+    <mat-card-footer>
+      <div class="chips-container">
+        <app-movie-info class="movie-info" [movie]="movie"></app-movie-info>
+      </div>
+    </mat-card-footer>
+    <div>
+      <button mat-fab extended class="button-container" (click)="openRatingDialog()">
+        <mat-icon>star</mat-icon>
+        Rate Movie
+      </button>
+    </div>
+  </mat-card>
+</div>

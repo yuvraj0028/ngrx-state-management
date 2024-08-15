@@ -1,0 +1,62 @@
+.br-default {
+  --br-font-size: 50px !important;
+}
+.br-unit {
+  font-size: var(--br-font-size) !important;
+}
+
+.rating-container {
+  height: 240px;
+  width: 500px;
+  position: relative;
+  border: #e51937 5px solid;
+  border-radius: 30px;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 3%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.rating-bar {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: 3%;
+  top: 35%;
+  left: 3%;
+}
+
+.button-row {
+  margin: 3%;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 200px;
+}
+
+.button-submit {
+  background-color: #e51937 !important;
+  margin-left: 3%;
+}
+
+.button-cancel {
+  background-color: white !important;
+  color: black !important;
+}
+
+.rating-bar-item {
+  font-size: 3rem;
+  width: 23%;
+  float: left;
+  margin: 1%;
+}
+
+.rating-bar :hover {
+  cursor: pointer;
+}

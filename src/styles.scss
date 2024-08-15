@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Importing bar-rating  */
+@import "ngx-bar-rating/themes/br-default-theme";
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
