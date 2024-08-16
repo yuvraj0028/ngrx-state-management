@@ -27,9 +27,11 @@ export class RatingDialogComponent {
   readonly dialogRef = inject(MatDialogRef<RatingDialogComponent>);
   readonly movieID = inject<number>(MAT_DIALOG_DATA);
   private rating!: number;
+  public rateNum: number = 0;
 
   // setting rating of movie
   setRating(rating: number) {
+    this.rateNum = rating;
     this.rating = rating;
   }
 
@@ -40,6 +42,8 @@ export class RatingDialogComponent {
 
   // sending data to parent component
   onSubmitClick(): void {
-    this.dialogRef.close({ id: this.movieID, rating: this.rating });
+    if (this.rating) {
+      this.dialogRef.close({ id: this.movieID, rating: this.rating });
+    }
   }
 }

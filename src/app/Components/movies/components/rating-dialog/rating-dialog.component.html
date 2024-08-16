@@ -3,11 +3,11 @@
     <p>Rate Movie - Movie 1</p>
   </div>
   <div class="rating-bar">
-    <div class="rating-bar-item" (click)="setRating(1)">🤡</div>
-    <div class="rating-bar-item" (click)="setRating(2)">😔</div>
-    <div class="rating-bar-item" (click)="setRating(3)">🙂</div>
-    <div class="rating-bar-item" (click)="setRating(4)">😍</div>
-    <div class="rating-bar-item" (click)="setRating(5)">🗿</div>
+    <div [style]="rateNum == 1 ? 'opacity: 1' : ''" class="rating-bar-item" (click)="setRating(1)">🤡</div>
+    <div [style]="rateNum == 2 ? 'opacity: 1' : ''" class="rating-bar-item" (click)="setRating(2)">😔</div>
+    <div [style]="rateNum == 3 ? 'opacity: 1' : ''" class="rating-bar-item" (click)="setRating(3)">🙂</div>
+    <div [style]="rateNum == 4 ? 'opacity: 1' : ''" class="rating-bar-item" (click)="setRating(4)">😍</div>
+    <div [style]="rateNum == 5 ? 'opacity: 1' : ''" class="rating-bar-item" (click)="setRating(5)">🗿</div>
   </div>
   <div class="button-row">
     <button mat-flat-button class="button-cancel" (click)="onCancelClick()">Cancel</button>
