@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Movie } from './components/Models/Movie.model';
 import { CommonModule } from '@angular/common';
 import { MoviesService } from './movies.service';
@@ -10,6 +10,9 @@ import { MovieInfoComponent } from './components/movie-info/movie-info.component
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDialog } from '@angular/material/dialog';
 import { RatingDialogComponent } from './components/rating-dialog/rating-dialog.component';
+import { Store } from '@ngrx/store';
+import { selectMovies } from './store/movie.selector';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-movies',
@@ -26,15 +29,11 @@ import { RatingDialogComponent } from './components/rating-dialog/rating-dialog.
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
 })
-export class MoviesComponent implements OnInit {
-  movies!: Movie[];
-
+export class MoviesComponent {
   constructor(private movieService: MoviesService) {}
 
-  // getting demo movies
-  ngOnInit(): void {
-    this.movies = this.movieService.getMovies();
-  }
+  store = inject(Store);
+  movies$ = this.store.select(selectMovies);
 
   // material dialog
   readonly dialog = inject(MatDialog);
@@ -48,7 +47,8 @@ export class MoviesComponent implements OnInit {
     // updating rating
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        console.log(result);
+        // updating rating using service
+        this.movieService.rateMovieById(result.id, result.rating);
       }
     });
   }

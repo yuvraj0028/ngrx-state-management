@@ -19,7 +19,8 @@ export class RatingBarComponent implements OnInit {
   calculateRating() {
     if (this.movie.rating.length > 0) {
       this.rating =
-        this.movie.rating.reduce((a, b) => a + b) / this.movie.rating.length;
+        this.movie.rating.reduce((a: number, b: number) => a + b) /
+        this.movie.rating.length;
     }
   }
 

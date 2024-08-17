@@ -5,6 +5,7 @@ import { RatingBarComponent } from '../rating-bar/rating-bar.component';
 import { BarRating } from 'ngx-bar-rating';
 import { Movie } from '../Models/Movie.model';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MoviesService } from '../../movies.service';
 
 export interface ID {
   id: number;

@@ -2,7 +2,7 @@ export interface Movie {
   id: number;
   name: string;
   imageUrl: string;
-  rating: number[];
+  rating: any;
   length: string;
   lang: string;
 }

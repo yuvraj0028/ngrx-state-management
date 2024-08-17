@@ -1,5 +1,5 @@
 <div class="movie-card-container">
-  <mat-card *ngFor="let movie of movies" class="movie-card" appearance="outlined">
+  <mat-card *ngFor="let movie of movies$ | async" class="movie-card" appearance="outlined">
     <img mat-card-image class="movie-card-image" src={{movie.imageUrl}} alt="img">
     <div class="icon-container">
       <mat-icon class="movie-card-play-icon">play_arrow</mat-icon>
