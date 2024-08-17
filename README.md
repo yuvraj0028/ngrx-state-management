@@ -1,27 +1,70 @@
-# MovieRatingStateManagement
+# Ngrx State Management
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+A simple movie rating angular website to understand concepts of ngrx state management.
 
-## Development server
+- ## NgRx Store
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+  1. Centralized store for managing application state.
+  2. Provides a single source of truth accessible from any component.
+  3. Utilizes RxJS observables to derive state.
 
-## Code scaffolding
+- ## NgRx Actions, Effects, and Selectors:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  - ### Actions
 
-## Build
+    1. Define different events or changes in the application.
+    2. Represent user interactions, API responses, etc.
+    3. Dispatched by components or effects to trigger state changes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  - ### Selectors
 
-## Running unit tests
+    1. Query the state consistently and efficiently.
+    2. Extract specific data from the store (e.g., rated movies, average rating).
+    3. Used in components to retrieve data.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  - ### Effects
+    1. Isolate side effects (e.g., API calls) from components.
+    2. Connect observables of actions to the store.
 
-## Running end-to-end tests
+- ## Benefits
+  1. Predictable and scalable state management.
+  2. Clean separation between components and side effects.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Related
 
-## Further help
+I have explained ngrx state management thoroughly in my [Medium Article](https://github.com/matiassingers/awesome-readme)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/yuvraj0028/ngrx-state-management.git
+```
+
+Go to the project directory
+
+```bash
+  cd ngrx-state-management
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  ng serve
+```
+
+## Tech Stack
+
+**Angular, Ngrx-Store**
+
+## Acknowledgements
+
+- [Angular Docs](https://angular.dev/overview)
+- [Ngrx Docs](https://ngrx.io/guide/store)
