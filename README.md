@@ -68,3 +68,5 @@ Start the server
 
 - [Angular Docs](https://angular.dev/overview)
 - [Ngrx Docs](https://ngrx.io/guide/store)
+
+![ngrx](https://ngrx.io/assets/images/badge.svg)
